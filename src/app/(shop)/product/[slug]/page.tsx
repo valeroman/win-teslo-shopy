@@ -1,3 +1,4 @@
+import { QuantitySelector, SizeSelector } from '@/components';
 import { titleFont } from '@/config/fonts';
 import { initialData } from '@/seed/seed';
 import { notFound } from 'next/navigation';
@@ -38,8 +39,13 @@ export default function ({ params }: Props) {
         </p>
 
         {/* Selector de tallas */}
+        <SizeSelector 
+          availableSizes={ product.sizes } 
+          selectedSize={ product.sizes[2]}
+        />
 
         {/* Selector de cantidad */}
+        <QuantitySelector quantity={ 3 } />
 
         {/* Boton */}
         <button className='btn-primary my-5 w-full'>
