@@ -35,9 +35,10 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
                 autoplay={{
                     delay: 2500
                 }}
-                thumbs={{
+                thumbs={{ swiper: thumbsSwiper }}
+                /* thumbs={{
                     swiper: thumbsSwiper && !thumbsSwiper.destroy ? thumbsSwiper : null
-                }}
+                }} */
                 modules={[FreeMode, Navigation, Thumbs, Autoplay]}
                 className="mySwiper2"
             >
@@ -72,7 +73,7 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
                     images.map(image => (
                         <SwiperSlide key={image}>
                             <Image
-                                src={`/products/${images}`}
+                                src={`/products/${image}`}
                                 alt={title}
                                 width={300}
                                 height={300}
