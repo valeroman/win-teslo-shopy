@@ -30,7 +30,7 @@ export default function () {
             {
               productInCart.map(product => (
                 <div key={product.slug} className='flex mb-5'>
-                  <Image 
+                  <Image
                     src={`/products/${product.images[0]}`}
                     width={100}
                     height={100}
